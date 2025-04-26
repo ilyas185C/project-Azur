@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Connexion à MongoDB
-mongoose.connect('mongodb://localhost:27017/bibliotheque', {
+mongoose.connect(process.env.mongoConnection, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
